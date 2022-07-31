@@ -23,7 +23,7 @@ public class mole : MonoBehaviour
 
     public void OnClick()
     {
-            GameObject.Find("manger").GetComponent<manger>().score = GameObject.Find("manger").GetComponent<manger>().score + 1;
+            GameObject.Find("manger").GetComponent<molemanger>().score = GameObject.Find("manger").GetComponent<molemanger>().score + 1;
             Destroy(gameObject);
     }
 }

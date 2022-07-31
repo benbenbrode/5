@@ -17,7 +17,7 @@ public class three : MonoBehaviour
     {
         if (ck == 0)
         {
-            if (GameObject.Find("manger").GetComponent<manger>().mole == 3)
+            if (GameObject.Find("manger").GetComponent<molemanger>().mole == 3)
             {
                 Instantiate(mole, molepos.transform.position, molepos.transform.rotation, GameObject.Find("Canvas").transform);
                 ck = 1;

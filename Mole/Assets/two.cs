@@ -17,7 +17,7 @@ public class two : MonoBehaviour
     {
         if (ck == 0)
         {
-            if (GameObject.Find("manger").GetComponent<manger>().mole == 2)
+            if (GameObject.Find("manger").GetComponent<molemanger>().mole == 2)
             {
                 Instantiate(mole, molepos.transform.position, molepos.transform.rotation, GameObject.Find("Canvas").transform);
                 ck = 1;
