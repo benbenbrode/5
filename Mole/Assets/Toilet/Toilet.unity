@@ -600,6 +600,7 @@ MonoBehaviour:
   check: 0
   target: {fileID: 1547392594928599475, guid: 02d0b2bbb4015e04680a102f0d2359c9, type: 3}
   move: {fileID: 1547392594928599475, guid: 02d0b2bbb4015e04680a102f0d2359c9, type: 3}
+  manb: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LimitTime: 10
   text_Timer: {fileID: 566505082}
+  gameclearck: 0
 --- !u!114 &566505082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,6 +1311,7 @@ MonoBehaviour:
   cnt: 0
   good: {fileID: 0}
   bad: {fileID: 0}
+  x: {fileID: 1254915344566404384, guid: 3c268fd94e7972c43bc083e65701264f, type: 3}
 --- !u!1 &1618463994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,3 +1708,4 @@ MonoBehaviour:
   check: 0
   target: {fileID: 7084141231073814735, guid: 697a3a62c3b62e5419d864ef64fe0f5d, type: 3}
   move: {fileID: 7084141231073814735, guid: 697a3a62c3b62e5419d864ef64fe0f5d, type: 3}
+  womanb: {fileID: 0}

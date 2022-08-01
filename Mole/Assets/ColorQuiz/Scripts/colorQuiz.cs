@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class colorQuiz : MonoBehaviour
 {
@@ -25,7 +26,9 @@ public class colorQuiz : MonoBehaviour
     public GameObject bad;
     public GameObject quizb;
     public SpriteRenderer colorc;
+    public GameObject x;
 
+    int ck = 0;
     void Awake()
     {
         good = Resources.Load("Prefabs/O") as GameObject;
@@ -138,6 +141,21 @@ public class colorQuiz : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ck == 0)
+        {
+            if (GameObject.Find("timer").GetComponent<colortimer>().LimitTime < 0.01)
+            {
+                Instantiate(x, new Vector3(0, 0, 0), Quaternion.identity);
+                Invoke("nextround", 2f);
+                ck = 1;
+            }
+        }
+    }
 
+    public void nextround()
+    {
+        GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
+        GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
+        SceneManager.LoadScene("Round");
     }
 }

@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LimitTime: 10
   text_Timer: {fileID: 1659888877}
+  gameclearck: 0
 --- !u!114 &1104276303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +625,6 @@ GameObject:
   - component: {fileID: 1659888875}
   - component: {fileID: 1659888878}
   - component: {fileID: 1659888877}
-  - component: {fileID: 1659888876}
   m_Layer: 5
   m_Name: timer
   m_TagString: Untagged
@@ -651,20 +651,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50.81331, y: 116.02}
   m_SizeDelta: {x: 160, y: 194.296}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1659888876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659888874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06317e5fe9a20f843a705dafc5a0017e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LimitTime: 10
-  text_Timer: {fileID: 1659888877}
 --- !u!114 &1659888877
 MonoBehaviour:
   m_ObjectHideFlags: 0

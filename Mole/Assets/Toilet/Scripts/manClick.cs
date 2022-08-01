@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class manClick : MonoBehaviour
@@ -11,10 +12,12 @@ public class manClick : MonoBehaviour
     public int check;
     public GameObject target;
     public GameObject move;
+    public Button manb;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find((GameObject.Find("Canvas").GetComponent<people>().cnt).ToString());
+        manb = GameObject.Find("man").GetComponent<Button>();
         check = 1;
     }
 
@@ -49,24 +52,31 @@ public class manClick : MonoBehaviour
         Destroy(target);
         if (check != GameObject.Find("Canvas").GetComponent<people>().person[GameObject.Find("Canvas").GetComponent<people>().cnt])
         {
+            manb.interactable = false;
+            GameObject.Find("woman").GetComponent<womanClick>().womanb.interactable = false;
             GameObject obj = MonoBehaviour.Instantiate(GameObject.Find("Canvas").GetComponent<people>().bad);
             obj.name = "X";
             Vector3 pos = new Vector3(0, 3, 0);
             obj.transform.position = pos;
             yield return new WaitForSeconds(1.5f);
             GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
+            GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
             Destroy(obj);
             SceneManager.LoadScene("Round");
         }
         if (check == GameObject.Find("Canvas").GetComponent<people>().person[GameObject.Find("Canvas").GetComponent<people>().cnt] && GameObject.Find("Canvas").GetComponent<people>().cnt + 1 == GameObject.Find("Canvas").GetComponent<people>().person.Length)
         {
+            manb.interactable = false;
+            GameObject.Find("woman").GetComponent<womanClick>().womanb.interactable = false;
             GameObject obj = MonoBehaviour.Instantiate(GameObject.Find("Canvas").GetComponent<people>().good);
             obj.name = "O";
+            GameObject.Find("timer").GetComponent<Timer>().gameclearck = 1;
             Vector3 pos = new Vector3(0, 3, 0);
             obj.transform.position = pos;
             yield return new WaitForSeconds(1.5f);
             GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
-            //Destroy(obj);
+            GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;
+            Destroy(obj);
             SceneManager.LoadScene("Round");
 
         }

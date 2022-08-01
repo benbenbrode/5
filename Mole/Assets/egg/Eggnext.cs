@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Eggnext : MonoBehaviour
 {
-    int ck = 0;
     public GameObject x;
     public GameObject o;
+    int xck = 0;
+    int ock = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +18,22 @@ public class Eggnext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("timer").GetComponent<Timer>().LimitTime < 0.1)
+        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.01)
         {
-            xcall();
+            if (xck == 0)
+            {
+                xcall();
+                xck = 1;
+            }
         }
 
         if (GameObject.Find("event").GetComponent<egg>().eggnum2 == 0)
         {
-            ck = 1;
-            Invoke("ocall", 0.1f);
+            if (ock == 0)
+            {
+                Invoke("ocall", 0.1f);
+                ock = 1;
+            }
         }
     }
 
@@ -39,22 +47,21 @@ public class Eggnext : MonoBehaviour
     {
         Instantiate(o, new Vector3(0, 0, 0), Quaternion.identity);
         Invoke("round2", 2f);
-        GameObject.Find("manger").GetComponent<Timer>().gameclearck = 1;
+        GameObject.Find("event").GetComponent<Timer>().gameclearck = 1;
     }
     public void round()
     {
-        if (ck == 0)
-        {
-            GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
-            SceneManager.LoadScene("Round");
-            
-        }
+        GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
+        GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
+        SceneManager.LoadScene("Round");
+           
     }
 
     public void round2()
     {
         SceneManager.LoadScene("Round");
         GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
+        GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;
     }
 
 }

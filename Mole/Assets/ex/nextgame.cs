@@ -10,13 +10,14 @@ public class nextgame : MonoBehaviour
     void Start()
     {
         while (true)
-        {
-            gameck = Random.Range(1, 5);
-            if(gameck != GameObject.Find("BG").GetComponent<Bg>().stageck)
-            {
-                break;
-            }
-        }
+         {
+             gameck = Random.Range(1, 5);
+             if(gameck != GameObject.Find("BG").GetComponent<Bg>().stageck)
+             {
+                 break;
+             }
+         }
+        
         
         
     }
