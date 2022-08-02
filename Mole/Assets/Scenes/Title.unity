@@ -322,6 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8366610272f375c40a104e06cafaf7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 893587996}
+  gameover: 0
+  gameround: 1
+  stageck: 0
+  difficulty: 0
   BGObject: {fileID: 595162208}
 --- !u!82 &595162213
 AudioSource:
