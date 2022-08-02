@@ -9,7 +9,7 @@ public class nextgame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        while (true)
+        /*while (true)
          {
              gameck = Random.Range(1, 5);
              if(gameck != GameObject.Find("BG").GetComponent<Bg>().stageck)
@@ -17,7 +17,8 @@ public class nextgame : MonoBehaviour
                  break;
              }
          }
-        
+         */
+        gameck = 3;
         
         
     }

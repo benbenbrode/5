@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class yellow_button : MonoBehaviour
 {
     private int num;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,10 @@ public class yellow_button : MonoBehaviour
                 GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
                 Vector3 pos = new Vector3(0, 3, 0);
                 obj.transform.position = pos;
+                GameObject.Find("Canvas").GetComponent<colorQuiz>().cb1.interactable = false;
+                GameObject.Find("Canvas").GetComponent<colorQuiz>().cb2.interactable = false;
+                GameObject.Find("Canvas").GetComponent<colorQuiz>().cb3.interactable = false;
+                GameObject.Find("Canvas").GetComponent<colorQuiz>().cb4.interactable = false;
                 yield return new WaitForSeconds(1.5f);
                 Destroy(obj);
                 SceneManager.LoadScene("Round");
@@ -44,6 +49,10 @@ public class yellow_button : MonoBehaviour
             GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;
             Vector3 pos = new Vector3(0, 3, 0);
             obj.transform.position = pos;
+            GameObject.Find("Canvas").GetComponent<colorQuiz>().cb1.interactable = false;
+            GameObject.Find("Canvas").GetComponent<colorQuiz>().cb2.interactable = false;
+            GameObject.Find("Canvas").GetComponent<colorQuiz>().cb3.interactable = false;
+            GameObject.Find("Canvas").GetComponent<colorQuiz>().cb4.interactable = false;
             yield return new WaitForSeconds(1.5f);
             Destroy(obj);
             SceneManager.LoadScene("Round");

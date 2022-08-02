@@ -15,7 +15,8 @@ public class egg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        eggnum = 10 + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * 5;
+        eggnum2 = 10 + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * 5;
     }
 
     // Update is called once per frame

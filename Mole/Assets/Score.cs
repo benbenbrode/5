@@ -8,6 +8,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text_Timer.text = GameObject.Find("manger").GetComponent<molemanger>().score + " / 5";
+        text_Timer.text = GameObject.Find("manger").GetComponent<molemanger>().score + " / " + GameObject.Find("manger").GetComponent<Molenext>().goal;
     }
 }

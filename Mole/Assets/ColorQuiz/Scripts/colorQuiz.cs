@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class colorQuiz : MonoBehaviour
 {
-    private Button cb1;
-    private Button cb2;
-    private Button cb3;
-    private Button cb4;
+    public Button cb1;
+    public Button cb2;
+    public Button cb3;
+    public Button cb4;
     private ColorBlock col1;
     private ColorBlock col2;
     private ColorBlock col3;
@@ -19,7 +19,7 @@ public class colorQuiz : MonoBehaviour
     private AudioSource b3;
     private AudioSource b4;
 
-    public int[] arr = new int[6];
+    public int[] arr;
     public bool showEnd = false;
     public int cnt = 0;
     public GameObject good;
@@ -31,6 +31,7 @@ public class colorQuiz : MonoBehaviour
     int ck = 0;
     void Awake()
     {
+        arr = new int[4 + GameObject.Find("BG").GetComponent<Bg>().difficulty / 3];
         good = Resources.Load("Prefabs/O") as GameObject;
         bad = Resources.Load("Prefabs/X") as GameObject;
         quizb = Resources.Load("Prefabs/quiz") as GameObject;

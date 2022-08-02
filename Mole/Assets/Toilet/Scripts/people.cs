@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class people : MonoBehaviour
 {
     private bool first = true;
-    public int[] person = new int[10];
+    public int[] person;
     public int cnt = 0;
     GameObject man;
     GameObject woman;
@@ -17,6 +17,7 @@ public class people : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        person = new int[8 + GameObject.Find("BG").GetComponent<Bg>().difficulty / 3]; 
         man = Resources.Load("Prefabs/Man") as GameObject;
         woman = Resources.Load("Prefabs/Woman") as GameObject;
         good = Resources.Load("Prefabs/O") as GameObject;

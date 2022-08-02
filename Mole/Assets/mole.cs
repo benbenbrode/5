@@ -7,7 +7,7 @@ public class mole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Des", 2f);
+        Invoke("Des", GameObject.Find("manger").GetComponent<molemanger>().speed);
     }
 
     // Update is called once per frame

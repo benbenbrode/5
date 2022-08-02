@@ -21,7 +21,16 @@ public class one : MonoBehaviour
             {
                 Instantiate(mole, molepos.transform.position, molepos.transform.rotation, GameObject.Find("Canvas").transform);
                 ck = 1;
-                Invoke("cker", 2f);
+                Invoke("cker", GameObject.Find("manger").GetComponent<molemanger>().speed);
+            }
+        }
+        if (ck == 0)
+        {
+            if (GameObject.Find("manger").GetComponent<molemanger>().mole2 == 1)
+            {
+                Instantiate(mole, molepos.transform.position, molepos.transform.rotation, GameObject.Find("Canvas").transform);
+                ck = 1;
+                Invoke("cker", GameObject.Find("manger").GetComponent<molemanger>().speed);
             }
         }
     }
