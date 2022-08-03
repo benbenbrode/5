@@ -15,7 +15,7 @@ public class Molenext : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
+        goal = 10 + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * 3;
     }
 
     // Update is called once per frame

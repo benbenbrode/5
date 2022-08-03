@@ -25,7 +25,7 @@ public class manClick : MonoBehaviour
     {
 
     }
-    public void Choose()
+    public void manChoose()
     {
         StartCoroutine(Moving());
     }

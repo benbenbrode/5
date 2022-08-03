@@ -92,7 +92,7 @@ public class colorQuiz : MonoBehaviour
                 case 1:
                     colorc.material.color = new Color(255 / 255f, 0 / 255f, 0 / 255f);
                     obj.name = arr[i].ToString();
-                    pos = new Vector3(0, (float)10.2, 0);
+                    pos = new Vector3(0, (float)9.8, 0);
                     obj.transform.position = pos;
                     b1.Play();
                     yield return new WaitForSeconds(.3f);
@@ -102,7 +102,7 @@ public class colorQuiz : MonoBehaviour
                 case 2:
                     colorc.material.color = new Color(255 / 255f, 255 / 255f, 0 / 255f);
                     obj.name = arr[i].ToString();
-                    pos = new Vector3(0, (float)-10.2, 0);
+                    pos = new Vector3(0, (float)-9.8, 0);
                     obj.transform.position = pos;
                     b2.Play();
                     yield return new WaitForSeconds(.3f);
@@ -112,7 +112,7 @@ public class colorQuiz : MonoBehaviour
                 case 3:
                     colorc.material.color = new Color(0 / 255f, 0 / 255f, 255 / 255f);
                     obj.name = arr[i].ToString();
-                    pos = new Vector3((float)10.2, 0, 0);
+                    pos = new Vector3((float)9.8, 0, 0);
                     obj.transform.position = pos;
                     b3.Play();
                     yield return new WaitForSeconds(.3f);
@@ -122,7 +122,7 @@ public class colorQuiz : MonoBehaviour
                 case 4:
                     colorc.material.color = new Color(0 / 255f, 255 / 255f, 0 / 255f);
                     obj.name = arr[i].ToString();
-                    pos = new Vector3((float)-10.2, 0, 0);
+                    pos = new Vector3((float)-9.8, 0, 0);
                     obj.transform.position = pos;
                     b4.Play();
                     yield return new WaitForSeconds(.3f);

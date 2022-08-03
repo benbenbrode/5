@@ -25,7 +25,7 @@ public class womanClick : MonoBehaviour
     {
 
     }
-    public void Choose()
+    public void womanChoose()
     {
         StartCoroutine(Moving());
     }
