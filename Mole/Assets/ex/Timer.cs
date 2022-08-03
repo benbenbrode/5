@@ -15,6 +15,10 @@ public class Timer : MonoBehaviour
             {
                 LimitTime -= Time.deltaTime;
             }
+            if (LimitTime < 0)
+            {
+                LimitTime = .00f;
+            }
             if (LimitTime > 5)
             {
                 text_Timer.text = LimitTime.ToString("F2");
@@ -24,6 +28,7 @@ public class Timer : MonoBehaviour
                 text_Timer.text = "<color=#ff0000>" + LimitTime.ToString("F2") + "</color>";
             }
         }
+
 
     }
 }

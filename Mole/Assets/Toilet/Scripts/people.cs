@@ -64,6 +64,8 @@ public class people : MonoBehaviour
         {
             if (GameObject.Find("timer").GetComponent<Timer>().LimitTime < 0.01)
             {
+                GameObject.Find("man").GetComponent<manClick>().manb.interactable = false;
+                GameObject.Find("woman").GetComponent<womanClick>().womanb.interactable = false;
                 Instantiate(x, new Vector3(0, 0, 0), Quaternion.identity);
                 Invoke("nextround",2f);
                 ck = 1;

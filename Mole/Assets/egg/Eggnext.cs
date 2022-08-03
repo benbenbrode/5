@@ -18,7 +18,7 @@ public class Eggnext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.01)
+        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.02)
         {
             if (xck == 0)
             {

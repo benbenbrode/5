@@ -17,6 +17,10 @@ public class colortimer : MonoBehaviour
                 {
                     LimitTime -= Time.deltaTime;
                 }
+                if (LimitTime < 0)
+                {
+                    LimitTime = .00f;
+                }
                 if (LimitTime > 5)
                 {
                     text_Timer.text = LimitTime.ToString("F2");
