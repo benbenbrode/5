@@ -21,7 +21,7 @@ public class molemanger : MonoBehaviour
     {
         if (ck == 0)
         {
-            if (GameObject.Find("manger").GetComponent<Timer>().LimitTime > 0.5)
+            if (GameObject.Find("manger").GetComponent<Timer>().LimitTime > 0.2)
             {
                 mole = Random.Range(1, 10);
                 ck = 1;
@@ -30,7 +30,7 @@ public class molemanger : MonoBehaviour
         }
         if (ck2 == 0)
         {
-            if (GameObject.Find("manger").GetComponent<Timer>().LimitTime > 0.5)
+            if (GameObject.Find("manger").GetComponent<Timer>().LimitTime > 0.2)
             {
                 mole2 = Random.Range(1, 10);
                 ck2 = 1;
@@ -38,6 +38,11 @@ public class molemanger : MonoBehaviour
             }
         }
 
+        if (GameObject.Find("manger").GetComponent<Molenext>().gameover == 1)
+        {
+            mole = 0;
+            mole2 = 0;
+        }
     }
 
     public void cker()

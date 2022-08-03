@@ -5,6 +5,8 @@ using UnityEngine;
 public class heart3Move : MonoBehaviour
 {
     public bool moved3;
+    public bool f_fail = false;
+    public bool f_fail_after = false;
     private bool up = true;
     private float y3;
     // Start is called before the first frame update
@@ -12,6 +14,18 @@ public class heart3Move : MonoBehaviour
     {
         moved3 = false;
         y3 = GameObject.Find("Heart3").transform.position.y;
+        if (GameObject.Find("Lifenum").GetComponent<Life>().Lifenum < 3)
+        {
+            if (f_fail == false)
+            {
+                f_fail = true;
+            }
+            else
+            {
+                f_fail_after = true;
+            }
+            GameObject.Find("Heart3").transform.position = new Vector2(GameObject.Find("Heart1").transform.position.x + 100, y3);
+        }
     }
 
     // Update is called once per frame
@@ -40,10 +54,5 @@ public class heart3Move : MonoBehaviour
                 }
             }
         }
-        if (GameObject.Find("Lifenum").GetComponent<Life>().Lifenum < 3)
-        {
-            GameObject.Find("Heart3").transform.position = new Vector2(GameObject.Find("Heart1").transform.position.x + 100, y3);
-        }
     }
-
 }

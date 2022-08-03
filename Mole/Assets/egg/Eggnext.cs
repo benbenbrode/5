@@ -7,6 +7,7 @@ public class Eggnext : MonoBehaviour
 {
     public GameObject x;
     public GameObject o;
+   
     int xck = 0;
     int ock = 0;
     // Start is called before the first frame update
@@ -18,21 +19,25 @@ public class Eggnext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.02)
+        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.01)
         {
             if (xck == 0)
             {
+                
                 xcall();
                 xck = 1;
+                
             }
         }
 
         if (GameObject.Find("event").GetComponent<egg>().eggnum2 == 0)
         {
-            if (ock == 0)
+            if (ock == 0 )
             {
+               
                 Invoke("ocall", 0.1f);
                 ock = 1;
+                
             }
         }
     }

@@ -11,6 +11,7 @@ public class Molenext : MonoBehaviour
     int xck = 0;
     public int goal = 10;
     int gameclear = 0;
+    public int gameover = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,8 @@ public class Molenext : MonoBehaviour
                 xcall();
                 xck = 1;
                 gameclear = 1;
-            }
+                gameover = 1;
+}
         }
         if(GameObject.Find("manger").GetComponent<molemanger>().score == 10 + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * 3)
         {
@@ -36,6 +38,7 @@ public class Molenext : MonoBehaviour
             {
                 if (ock == 0)
                 {
+                    gameover = 1;
                     Invoke("ocall", 0.1f);
                     ock = 1;
                 }

@@ -22,7 +22,12 @@ public class egg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(eggnum == 0)
+        if (GameObject.Find("event").GetComponent<Timer>().LimitTime < 0.01)
+        {
+            eggnum = 100;
+            eggnum2 = 200;
+        }
+        if (eggnum == 0)
         {
             if (ck == 0)
             {
