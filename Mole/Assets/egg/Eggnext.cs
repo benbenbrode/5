@@ -58,12 +58,14 @@ public class Eggnext : MonoBehaviour
     {
         GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
         GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
+        GameObject.Find("BG").GetComponent<Bg>().stageck = 2;
         SceneManager.LoadScene("Round");
            
     }
 
     public void round2()
     {
+        GameObject.Find("BG").GetComponent<Bg>().stageck = 2;
         SceneManager.LoadScene("Round");
         GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
         GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;

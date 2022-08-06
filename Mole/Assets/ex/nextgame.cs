@@ -17,8 +17,8 @@ public class nextgame : MonoBehaviour
                  break;
              }
          }
-        
 
+        
         
         
     }

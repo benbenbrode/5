@@ -62,6 +62,7 @@ public class womanClick : MonoBehaviour
             GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
             GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
             Destroy(obj);
+            GameObject.Find("BG").GetComponent<Bg>().stageck = 3;
             SceneManager.LoadScene("Round");
         }
         if (check == GameObject.Find("Canvas").GetComponent<people>().person[GameObject.Find("Canvas").GetComponent<people>().cnt] && GameObject.Find("Canvas").GetComponent<people>().cnt + 1 == GameObject.Find("Canvas").GetComponent<people>().person.Length)
@@ -77,6 +78,7 @@ public class womanClick : MonoBehaviour
             GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
             GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;
             Destroy(obj);
+            GameObject.Find("BG").GetComponent<Bg>().stageck = 3;
             SceneManager.LoadScene("Round");
         }
         if (GameObject.Find("Canvas").GetComponent<people>().cnt != GameObject.Find("Canvas").GetComponent<people>().person.Length)

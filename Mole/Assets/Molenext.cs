@@ -62,7 +62,7 @@ public class Molenext : MonoBehaviour
 
     public void round()
     {
-
+        GameObject.Find("BG").GetComponent<Bg>().stageck = 1;
         GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
         GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
         SceneManager.LoadScene("Round");
@@ -72,6 +72,7 @@ public class Molenext : MonoBehaviour
 
     public void round2()
     {
+        GameObject.Find("BG").GetComponent<Bg>().stageck = 1;
         GameObject.Find("BG").GetComponent<Bg>().gameround = GameObject.Find("BG").GetComponent<Bg>().gameround + 1;
         GameObject.Find("BG").GetComponent<Bg>().difficulty = GameObject.Find("BG").GetComponent<Bg>().difficulty + 1;
         SceneManager.LoadScene("Round");

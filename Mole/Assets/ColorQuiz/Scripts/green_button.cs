@@ -22,8 +22,9 @@ public class green_button : MonoBehaviour
     {
         if (GameObject.Find("Canvas").GetComponent<colorQuiz>().showEnd == true && GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt <= GameObject.Find("Canvas").GetComponent<colorQuiz>().arr.Length)
         {
-            if (GameObject.Find("Canvas").GetComponent<colorQuiz>().arr[GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt] != num)
+            if (GameObject.Find("Canvas").GetComponent<colorQuiz>().arr[GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt] != num && GameObject.Find("Canvas").GetComponent<colorQuiz>().gameoverck == 0)
             {
+                GameObject.Find("Canvas").GetComponent<colorQuiz>().gameoverck = 1;
                 GameObject obj = MonoBehaviour.Instantiate(GameObject.Find("Canvas").GetComponent<colorQuiz>().bad);
                 obj.name = "X";
                 GameObject.Find("Lifenum").GetComponent<Life>().Lifenum = GameObject.Find("Lifenum").GetComponent<Life>().Lifenum - 1;
@@ -36,12 +37,14 @@ public class green_button : MonoBehaviour
                 GameObject.Find("Canvas").GetComponent<colorQuiz>().cb4.interactable = false;
                 yield return new WaitForSeconds(1.5f);
                 Destroy(obj);
+                GameObject.Find("BG").GetComponent<Bg>().stageck = 4;
                 SceneManager.LoadScene("Round");
             }
             GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt++;
         }
-        if (GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt == GameObject.Find("Canvas").GetComponent<colorQuiz>().arr.Length)
+        if (GameObject.Find("Canvas").GetComponent<colorQuiz>().cnt == GameObject.Find("Canvas").GetComponent<colorQuiz>().arr.Length && GameObject.Find("Canvas").GetComponent<colorQuiz>().gameoverck == 0)
         {
+            GameObject.Find("Canvas").GetComponent<colorQuiz>().gameoverck = 1;
             GameObject obj = MonoBehaviour.Instantiate(GameObject.Find("Canvas").GetComponent<colorQuiz>().good);
             obj.name = "O";
             GameObject.Find("timer").GetComponent<colortimer>().gameclearck = 1;
@@ -55,6 +58,7 @@ public class green_button : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<colorQuiz>().cb4.interactable = false;
             yield return new WaitForSeconds(1.5f);
             Destroy(obj);
+            GameObject.Find("BG").GetComponent<Bg>().stageck = 4;
             SceneManager.LoadScene("Round");
         }
     }
