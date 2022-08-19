@@ -18,14 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Egg.unity
     guid: 6a7377cff5eb54847824a2d4893508fd
   - enabled: 1
-    path: Assets/Scenes/rock.unity
-    guid: 40cdd160f4168c2459497ab1334db289
-  - enabled: 1
     path: Assets/GameOver/Gameover.unity
     guid: 6f3941cdc02a81a49a008a289242886c
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/rock.unity
+    guid: 40cdd160f4168c2459497ab1334db289
   - enabled: 1
     path: Assets/Toilet/Toilet.unity
     guid: 6c78e52e8eef14441b4c54bf3113c9d8

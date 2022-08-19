@@ -619,6 +619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moved2: 0
+  f_fail: 0
+  f_fail_after: 0
 --- !u!1 &970406408
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moved3: 0
+  f_fail: 0
+  f_fail_after: 0
 --- !u!1 &1484205358
 GameObject:
   m_ObjectHideFlags: 0

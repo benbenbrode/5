@@ -11,14 +11,14 @@ public class nextgame : MonoBehaviour
     {
         while (true)
          {
-             gameck = Random.Range(1, 5);
+             gameck = Random.Range(1, 6);
              if(gameck != GameObject.Find("BG").GetComponent<Bg>().stageck)
              {
                  break;
              }
          }
 
-        
+
         
         
     }
@@ -46,6 +46,10 @@ public class nextgame : MonoBehaviour
         if (gameck == 4)
         {
             SceneManager.LoadScene("ColorQuiz");
+        }
+        if (gameck == 5)
+        {
+            SceneManager.LoadScene("rock");
         }
     }
 }
