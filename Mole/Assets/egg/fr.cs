@@ -21,6 +21,9 @@ public class fr : MonoBehaviour
 
     public void OnClick()
     {
-        GameObject.Find("event").GetComponent<egg>().eggnum = GameObject.Find("event").GetComponent<egg>().eggnum - 1;
+        if (GameObject.Find("event").GetComponent<Timer>().gameclearck == 0)
+        {
+            GameObject.Find("event").GetComponent<egg>().eggnum = GameObject.Find("event").GetComponent<egg>().eggnum - 1;
+        }
     }
 }

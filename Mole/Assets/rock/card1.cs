@@ -12,7 +12,7 @@ public class card1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = .3f + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * .15f;
+        speed = .5f + (GameObject.Find("BG").GetComponent<Bg>().difficulty / 3) * .15f;
         if (GameObject.Find("EventSystem").GetComponent<mix>().mixnum == 1)
         {
             if (GameObject.Find("EventSystem").GetComponent<mix>().mixnum2 == 2)

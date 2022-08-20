@@ -23,7 +23,7 @@ public class Eggnext : MonoBehaviour
         {
             if (xck == 0)
             {
-                
+                GameObject.Find("event").GetComponent<Timer>().gameclearck = 1;
                 xcall();
                 xck = 1;
                 

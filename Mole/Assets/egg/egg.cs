@@ -22,11 +22,6 @@ public class egg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("event").GetComponent<Timer>().LimitTime == 0)
-        {
-            eggnum = 100;
-            eggnum2 = 200;
-        }
         if (eggnum == 0)
         {
             if (ck == 0)
@@ -40,6 +35,7 @@ public class egg : MonoBehaviour
         {
             if (ck1 == 0)
             {
+                GameObject.Find("event").GetComponent<Timer>().gameclearck = 1;
                 Instantiate(egg3, egg2pos.transform.position, egg2pos.transform.rotation, GameObject.Find("Canvas").transform);
                 ck1 = 1;
             }

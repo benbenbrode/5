@@ -475,6 +475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   end: 0
   bt: {fileID: 1820166938}
+  c1: {fileID: 0}
+  c2: {fileID: 0}
+  c3: {fileID: 0}
 --- !u!1 &240602580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,6 +1616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   end: 0
   bt: {fileID: 0}
+  c1: {fileID: 1582904164}
+  c2: {fileID: 240602580}
+  c3: {fileID: 1884639252}
 --- !u!1 &1845989885
 GameObject:
   m_ObjectHideFlags: 0
