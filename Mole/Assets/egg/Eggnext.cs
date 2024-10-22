@@ -7,7 +7,9 @@ public class Eggnext : MonoBehaviour
 {
     public GameObject x;
     public GameObject o;
-   
+
+
+
     int xck = 0;
     int ock = 0;
     // Start is called before the first frame update

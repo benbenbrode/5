@@ -31,6 +31,8 @@ public class nextgame : MonoBehaviour
 
     public void next()
     {
+
+       
         if (gameck == 1)
         {
             SceneManager.LoadScene("Mole");
@@ -49,7 +51,8 @@ public class nextgame : MonoBehaviour
         }
         if (gameck == 5)
         {
-            SceneManager.LoadScene("rock");
+            SceneManager.LoadScene("Rock");
         }
+
     }
 }

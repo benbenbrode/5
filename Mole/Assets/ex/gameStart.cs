@@ -5,20 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class gameStart : MonoBehaviour
 {
+    public bool startcker = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("wait", 1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
+
 
     public void onclik()
     {
-        SceneManager.LoadScene("Round");
+        if (startcker)
+        {
+            SceneManager.LoadScene("Round");
+        }
+    }
+    void wait()
+    {
+        startcker = true;
     }
 }

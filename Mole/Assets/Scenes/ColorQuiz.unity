@@ -574,7 +574,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1183,6 +1183,7 @@ MonoBehaviour:
   quizb: {fileID: 0}
   colorc: {fileID: 0}
   x: {fileID: 1254915344566404384, guid: 3c268fd94e7972c43bc083e65701264f, type: 3}
+  gameoverck: 0
 --- !u!95 &1574672195
 Animator:
   serializedVersion: 3
