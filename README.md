@@ -16,7 +16,7 @@
 사용 엔진 : UNITY 2020.3.15f1
 ---
 
-시연 영상 : 
+시연 영상 : https://www.youtube.com/watch?v=YeyzXlzOQ1c
 ---
 
 게임 종류
