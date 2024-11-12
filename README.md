@@ -19,6 +19,9 @@
 시연 영상 : https://www.youtube.com/watch?v=YeyzXlzOQ1c
 ---
 
+APK 파일 : http://naver.me/F1rwIZyR
+---
+
 게임 종류
 ---
 #01) 달걀을 깨는 클리커 게임
