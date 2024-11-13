@@ -13,6 +13,15 @@
 개발 목적 : 한손으로 할 수 있는 킬링타임용 모바일 게임을 만들 목적
 ---
 
+개발 기간 : Initial Development**: 2021.06.25 - 2021.09.01
+**Final Development and Completion**: 2024.04.10 - 2024.04.15
+---
+
+프로젝트 타입 : 팀프로젝트
+**Role**: [게임1, 게임3, 게임4, UI]
+**Collaborators**: [wooee209]
+---
+
 사용 엔진 : UNITY 2020.3.15f1
 ---
 
